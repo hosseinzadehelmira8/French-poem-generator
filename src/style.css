@@ -97,7 +97,7 @@ input[type="submit"]:hover, .submit-button:hover {
   border-radius: 10px;
   text-align: center;
   margin: 20px auto;
-  max-width: 500px;
+  max-width: 650px;
   animation: fadeInUp 1s ease;
 }
 
