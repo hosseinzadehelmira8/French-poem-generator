@@ -1,12 +1,16 @@
-
 body {
   background-color: #f9f7fe;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-/* لینک‌ها با انیمیشن ملایم */
+/* لینک‌ها */
 a {
   color: #885df1;
   text-decoration: none;
@@ -15,13 +19,6 @@ a {
 a:hover {
   color: #5c3cb1;
   text-shadow: 0px 2px 8px rgba(136, 93, 241, 0.4);
-}
-
-/* کانتینر با انیمیشن fade-in */
-.container {
-  margin: 120px auto;
-  max-width: 600px;
-  animation: fadeIn 1.2s ease;
 }
 
 /* هدر با گرادیانت متن */
@@ -33,98 +30,11 @@ h1 {
   background: linear-gradient(90deg, #885df1, #ff8efb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* فرم با سایه لطیف‌تر و افکت hover */
-form {
-  padding: 30px;
-  background-color: white;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  border-radius: 15px;
-  display: flex;
   margin-bottom: 30px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 25px 70px rgba(65, 50, 100, 0.15);
+  animation: fadeIn 1.2s ease;
 }
 
-/* فیلد ورودی */
-.instructions {
-  padding: 16px;
-  border: 1px solid rgba(39, 33, 66, 0.5);
-  width: 80%;
-  font-size: 16px;
-  border-radius: 50px;
-  line-height: 20px;
-  color: #272044;
-  outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-.instructions:focus {
-  border: 1px solid #885df1;
-  box-shadow: 0px 0px 8px rgba(136, 93, 241, 0.5);
-}
-
-/* دکمه */
-.submit-button {
-  margin-left: 10px;
-  background: linear-gradient(90deg, #885df1, #b17bff);
-  color: white;
-  border: none;
-  width: 150px;
-  font-size: 16px;
-  border-radius: 50px;
-  padding: 14px 24px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.submit-button:hover {
-  background: linear-gradient(90deg, #7645e6, #9a63ff);
-  transform: scale(1.05);
-}
-
-/* شعر */
-.poem {
-  font-size: 16px;
-  background-color: #fff;
-  padding: 20px;
-  line-height: 2;
-  border-left: 3px solid #885df1;
-  box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
-  border-radius: 8px;
-  animation: fadeInUp 1s ease;
-}
-
-/* فوتر */
-footer {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 30px;
-  color: #555;
-}
-
-/* انیمیشن‌ها */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* مرکز چین کردن کل محتوا */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-/* فرم وسط‌چین و زیبا */
+/* فرم */
 form {
   display: flex;
   justify-content: center;
@@ -136,9 +46,30 @@ form {
   border-radius: 12px;
   width: 100%;
   max-width: 600px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 25px 70px rgba(65, 50, 100, 0.15);
 }
 
-/* دکمه سابمیت شکیل‌تر */
+/* فیلد ورودی */
+input[type="text"], .instructions {
+  padding: 14px 20px;
+  border: 1px solid rgba(39, 33, 66, 0.3);
+  border-radius: 50px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 350px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+input[type="text"]:focus, .instructions:focus {
+  border-color: #885df1;
+  box-shadow: 0 0 8px rgba(136, 93, 241, 0.4);
+}
+
+/* دکمه سابمیت */
 input[type="submit"], .submit-button {
   background: linear-gradient(135deg, #885df1, #6b44d6);
   color: white;
@@ -150,50 +81,34 @@ input[type="submit"], .submit-button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
 input[type="submit"]:hover, .submit-button:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #6b44d6, #885df1);
 }
 
-/* متن شعر وسط‌چین */
-.poem {
-  text-align: center;
-}
-
-/* فوتر وسط‌چین */
-footer {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 30px;
-  opacity: 0.8;
-}
-/* استایل اینپوت متن */
-input[type="text"], .instructions {
-  padding: 14px 20px;
-  border: 1px solid rgba(39, 33, 66, 0.3);
-  border-radius: 50px;
-  font-size: 16px;
-  width: 100%;
-  max-width: 350px;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-}
-
-/* افکت فوکوس روی اینپوت */
-input[type="text"]:focus, .instructions:focus {
-  border-color: #885df1;
-  box-shadow: 0 0 8px rgba(136, 93, 241, 0.4);
-}
-.div {
+/* شعر */
+#poem {
   font-size: 16px;
   background-color: #fff;
   padding: 20px;
   line-height: 2;
   border-left: 3px solid #885df1;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
-  text-align: center; /* متن شعر وسط‌چین */
-  margin: 0 auto;     /* وسط‌چین کردن باکس */
-  max-width: 500px;   /* محدود کردن عرض برای زیباتر شدن */
   border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;
+  animation: fadeInUp 1s ease;
 }
+
+/* فوتر */
+footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+  opacity: 0.8;
+  color: #555;
+}
+
+/* انیمیشن‌ها */
+@keyframes
