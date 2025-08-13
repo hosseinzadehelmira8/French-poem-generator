@@ -113,7 +113,11 @@ footer {
   color: #555;
 }
 
-/* انیمیشن‌ها */
 main {
-  width: 481px;
+  display: flex;
+  flex-direction: column;      /* بچه‌ها (فرم و شعر) عمودی قرار بگیرند */
+  justify-content: center;     /* وسط‌چین عمودی */
+  align-items: center;         /* وسط‌چین افقی */
+  min-height: 100vh;           /* ارتفاع کل صفحه */
+  gap: 20px;                   /* فاصله بین فرم و شعر */
 }
