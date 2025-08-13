@@ -114,4 +114,6 @@ footer {
 }
 
 /* انیمیشن‌ها */
-@keyframes
+main {
+  width: 481px;
+}
