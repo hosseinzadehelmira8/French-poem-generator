@@ -96,6 +96,7 @@ input[type="submit"]:hover, .submit-button:hover {
   border-radius: 10px;
   text-align: center;
   margin: 20px auto;
+ 
   animation: fadeInUp 1s ease;
   display: flex;                /* فعال کردن فلکس‌باکس */
   justify-content: center;      /* وسط‌چین افقی */
